@@ -1,0 +1,290 @@
+/**
+ *------
+ * BGA framework: © Gregory Isabelli <gisabelli@boardgamearena.com> & Emmanuel Colin <ecolin@boardgamearena.com>
+ * GiveMeAPlusPlus implementation : © <Your name here> <Your email address here>
+ *
+ * This code has been produced on the BGA studio platform for use on http://boardgamearena.com.
+ * See http://en.boardgamearena.com/#!doc/Studio for more information.
+ * -----
+ *
+ * givemeaplusplus.css
+ *
+ * GiveMeAPlusPlus stylesheet
+ *
+ */
+
+/*
+    This is the CSS stylesheet of your game User Interface.
+    
+    Styles defined on this file will be applied to the HTML elements you define in your
+    HTML template (givemeaplusplus_givemeaplusplus.tpl), and to HTML elements you create dynamically
+    (in givemeaplusplus.js).
+    
+    Usually, you are using CSS to:
+    
+    1°) define the overall layout of your game
+        (ex: place the board on the top left, place player's hand beside, place the deck on the right, ...).
+
+    2°) create your CSS-sprites:
+        All images of your games should be gathered into a small number of image files. Then, using
+        background-image and background-position CSS properties, you create HTML blocks that can 
+        display these images correctly (see example below).
+    
+    3°) ... anything else:
+        It is really easy to add and remove CSS classes dynamically from your Javascript with
+        dojo.addClass and dojo.removeClass. It is also easy to check if an element has a class
+        (dojo.hasClass) or to get all elements with a specific class (dojo.query). This is why,
+        very often, using CSS classes for the logic of your user interface allow you to do complex
+        thing easily.
+        
+        
+     Note: on the production platform, this file will be compressed and comments will be removed.
+           Consequently, don't hesitate to put as many comments as necessary.
+*/
+
+
+/* Note: you must not use any @import directive */
+
+
+/********* You can start writing your CSS below this line: **********/
+
+@import url(../../../css/csslayer.css);
+/*
+    Example of CSS sprites (a black token and a white token, 20x20px each, embedded in the same "tokens.png" 40x20px image):
+
+    .white_token {
+        background-image: url('img/tokens.png');
+        background-position: 0px 0px;
+    }
+    .black_token {
+        background-image: url('img/tokens.png');
+        background-position: -20px 0px;
+    }
+    .token {
+        width: 20px;
+        height: 20px;
+        background-repeat: none;
+    }
+*/
+#MyHand {
+    width: 400px;
+}
+
+.whole_container {
+    display: inline-flex;
+}
+.mainboard1 {
+    display: inline-flex;
+}
+.mainboard2 {
+    display: inline-block;
+}
+
+.hand_piles{
+    display: inline-block;
+}
+.game_cover{
+    position: relative;
+    width: 600px;
+    height: 265px;
+    background-size: cover;
+    background-image: url('img/A++\ cover.png');
+}
+.scoreboard {
+    display: inline-block;
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+    background-image: url("img/scoreboard.jpg");
+    background-size: contain;
+    width: 600px;
+    height: 535px;
+}
+.seats {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-image: url("img/seats.jpg");
+    background-size: contain;
+    width: 500px;
+    height: 800px;
+}
+
+/*
+.cardinseat:hover{
+    box-sizing: border-box;
+    border: 4px solid gold;
+    border-radius: 10px;
+}
+*/
+.head_warning{
+    background-color: #f8c740;
+}
+
+.cardinseat {
+    display: inline-block;
+    width: 125px;
+    height: 172px;
+}
+
+.theCard{
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+}
+
+.card_front{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.card_back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+
+.theCard:hover{
+    transform: rotateY(180deg);
+}
+
+
+.cardinseat1 {
+    margin-top: 30px;
+    margin-left: 45px;
+}
+.cardinseat2 {
+    margin-top: 30px;
+    margin-left: 11px;
+    
+}
+.cardinseat3 {
+    margin-top: 30px;
+    margin-left: 12px;
+    
+}
+.cardinseat4 {
+    margin-top: 11px;
+    margin-left: 45px;
+}
+.cardinseat5 {
+    margin-top: 11px;
+    margin-left: 11px;
+}
+.cardinseat6 {
+    margin-top: 11px;
+    margin-left: 12px;
+}
+.cardinseat7 {
+    margin-top: 11px;
+    margin-left: 45px;
+}
+.cardinseat8 {
+    margin-top: 11px;
+    margin-left: 11px;
+}
+.cardinseat9 {
+    margin-top: 11px;
+    margin-left: 12px;
+}
+.cardinseat10 {
+    margin-top: 11px;
+    margin-left: 45px;
+}
+.cardinseat11 {
+    margin-top: 11px;
+    margin-left: 11px;
+}
+.cardinseat12 {
+    margin-top: 11px;
+    margin-left: 12px;
+}
+
+
+/*
+#cardsinseat_1 {
+    box-sizing: border-box;
+    border: 4px solid rgb(0, 255, 149);
+    border-radius: 10px;
+    display: inline-block;
+}
+*/
+
+
+.tablecard_restroom {
+    background-image: url('img/red_restroom.jpg'); 
+}
+.tablecard_yell {
+    background-image: url('img/red_yell.jpg');
+}
+.tablecard_tryhard1 {
+    background-image: url('img/red_tryhard1.jpg');
+}
+.tablecard_tryhard2 {
+    background-image: url('img/red_tryhard2.jpg');
+}
+.tablecard_report_frontback {
+    background-image: url('img/red_report_frontback.jpg');
+}
+.tablecard_report_leftright {
+    background-image: url('img/red_report_leftright.jpg');
+}
+.tablecard_peek_front{
+    background-image: url('img/red_peek_front.jpg')
+}
+.tablecard_peek_back{
+    background-image: url('img/red_peek_back.jpg')
+}
+.tablecard_peek_left{
+    background-image: url('img/red_peek_left.jpg')
+}
+.tablecard_peek_right{
+    background-image: url('img/red_peek_right.jpg')
+}
+
+
+.popup-image {
+    position: fixed;
+    top: 0; left: 0;
+    background: rgba(0, 0, 0, .9);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+.popup-image span {
+    position: absolute;
+    top: 60px; right: 10px;
+    font-size: 40px;
+    font-weight: bolder;
+    color:#fff;
+    cursor: pointer;
+    z-index: inherit;
+}
+.popup-image #pop-id {
+    position: absolute;
+    top: 70%; left: 55%;
+    transform: translate(-50%, -50%);
+    width: 768px;
+    height: 1063px;
+    object-fit: cover;
+    background-size: 70%;
+    background-repeat: no-repeat;
+}
+
+.cardontable {
+    position: absolute;
+    width: 126px;
+    height: 175px;
+    background-image: url('img/A++_image_reverse_stretch.jpg'); 
+}
+
+.cardback{
+    position: absolute;
+    width: 126px;
+    height: 175px;
+    background-image: url('img/cardbacks.jpg'); 
+}
